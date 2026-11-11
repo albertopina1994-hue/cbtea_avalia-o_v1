@@ -447,7 +447,7 @@ function finishSubmission(payload,preview){
   const thanks=document.querySelector('#thanks');thanks.hidden=false;
   if(preview){thanks.querySelector('.eyebrow').textContent='TESTE CONCLUÍDO';thanks.querySelector('h2').textContent='Teste do formulário concluído.';thanks.querySelector('p').textContent='Nenhuma resposta foi registrada. Este arquivo está sendo usado apenas para testar o formulário.';}
   thanks.focus();
-  if(reviewUrl){const link=document.querySelector('#reviewLink');link.href=reviewUrl;link.hidden=false;document.querySelector('#redirectStatus').textContent=preview?'Abrindo o link de avaliação da unidade. As respostas deste teste não foram salvas.':'Você será direcionado à página de avaliação da sua unidade no Google.';setTimeout(()=>window.location.assign(reviewUrl),5000);}
+  if(reviewUrl){const link=document.querySelector('#reviewLink');link.href=reviewUrl;link.hidden=false;document.querySelector('#redirectStatus').textContent=preview?'Abrindo o link de avaliação da unidade. As respostas deste teste não foram salvas.':'Você será direcionado à página de avaliação da sua unidade no Google.';setTimeout(()=>window.location.assign(reviewUrl),3500);}
 }
 
 function randomHex(bytes){return Array.from(crypto.getRandomValues(new Uint8Array(bytes)),b=>b.toString(16).padStart(2,'0')).join('');}
